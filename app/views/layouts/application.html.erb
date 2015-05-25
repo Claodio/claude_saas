@@ -8,6 +8,7 @@
 </head>
 <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
     
@@ -102,10 +103,74 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="main-navbar-collapse">
 >>>>>>> contact_form
+=======
+  <header role="banner">
+    <div class="container">
+      <a href="index.php">
+        <img class="navbar-brand visible-xs visible-sm" alt="Ziptales" src="img/ziplogo.png">
+        <img height="78px;" width="417" class=" visible-md visible-lg" src="img/ziptales.png" alt="Ziptales'">
+      </a>
+      <div class="utility-nav">
+        <ul>
+          <li>
+            <a target="_blank" href="https://plus.google.com/b/102047394736458742209/102047394736458742209/posts">
+              <span class="icon fa fa-google-plus"></span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/ziptales">
+              <span class="icon fa fa-twitter"></span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.facebook.com/ziptales">
+              <span class="icon fa fa-facebook"></span>
+            </a>
+          </li>
+          <li>
+            <a href="../blog/">
+              <img height="30" width="97" alt="" src="img/blog.png">
+            </a> 
+          </li>
+          <li>
+            <a href="login.php" title="Login or Register">
+              <i class="icon fa fa-user fa-lg"></i>
+              <span>Log In or Register</span>
+            </a>
+          </li>
+          <li>
+            <a title="View Cart" href="#">
+              <i class="icon fa fa-shopping-cart fa-lg"></i> 
+              <span>View Cart</span>
+            </a>
+          </li>
+        </ul>
+        <p class="h3special">Reading for the digital age!</p> 
+        <div id="fb-root"></div>
+        <div data-share="false" data-show-faces="false" data-action="like" data-layout="standard" data-width="300" data-href="" class="fb-like"></div>        
+      </div><!-- /.utility-nav -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to root_path, class:"navbar-brand" do %>
+          <i class="fa fa-users"></i>
+          SaaS Logo
+          <% end %>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-navbar-collapse">
+>>>>>>> master
           <ul class="nav navbar-nav navbar-right">
             <li> <%= link_to "About", about_path %></li>
             <li> <%= link_to "Contact Us", new_contact_path %></li>
           </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div><!-- /.navbar-collapse -->
   </div><!-- /.container-->
@@ -123,14 +188,26 @@
   </header>
   <main>
     <div class="container">
+=======
+        </div><!-- /.navbar-collapse -->
+      </nav>
+    </div><!-- /.container-->
+  </header>
+ 
+  <div class="container">
+>>>>>>> master
       <% flash.each do |key, value| %>
         <%= content_tag :div, value, class: "alert alert-#{key}" %>
       <% end %>
       <%= yield %>
+<<<<<<< HEAD
     </div>
   </main>
   
 >>>>>>> contact_form
+=======
+  </div>
+>>>>>>> master
 
 </body>
 </html>
