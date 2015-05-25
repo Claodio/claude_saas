@@ -2,3 +2,49 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+header[role="banner"]{
+  .navbar-header{
+    
+  }
+  .banner-brand{
+    img{
+      
+    }
+  }
+  > .container{
+    position: relative;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+  .utility-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1999;
+    > ul {
+      list-style: none;
+      float: right;
+      > li {
+        float: left;
+        > a {
+          display: inline-block;
+          padding: 8px 12px;
+/*           @media (max-width: (@grid-float-breakpoint - 1)) {
+            span {
+              .sr-only();
+            }
+            .icon {
+              font-size: 2em;
+              // line-height: 1.2;
+            }
+          } */
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
