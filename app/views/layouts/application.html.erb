@@ -47,25 +47,29 @@
                 </a>
               </li>
             </ul>
-            <ul> 
-              <li>
-                <a href="login.php" title="Login">
-                  <i class="icon fa fa-user fa-lg"></i>
-                  <span>Log In</span>
-                </a>
-              </li>
-              <li>
-                <a href="register.php" title="Register">
-                  <i class=""></i>
-                  <span>Register</span>
-                </a>
-              </li>
-              <li>
-                <a title="View Cart" href="#">
-                  <i class="icon fa fa-shopping-cart fa-lg"></i> 
-                  <span>View Cart</span>
-                </a>
-              </li>
+            <ul>
+              <% if current_user  %>
+                <li class= "btn">
+                    <i class="icon fa fa-user fa-lg"></i>
+                    <%= button_to "Sign Out", destroy_user_session_path, mehod: :delete %>
+                </li>
+              <li class= "btn">
+                  <a title="View Cart" href="#">
+                    <i class="icon fa fa-shopping-cart fa-lg"></i> 
+                    <span>View Cart</span>
+                  </a>
+                </li>
+              <% else %>
+                <li class= "btn">
+                    <i class="icon fa fa-user fa-lg"></i>
+                    <%= link_to "Log In", new_user_session_path, method: :get  %>
+                </li>
+                <li class= "btn"><!-- btn btn-primary navbar-btn-->
+                    <i class="fa fa-users"></i>
+                    <%= link_to "Register", new_user_registration_path, method: :get  %>
+                </li>
+                
+              <% end %>
             </ul>
             <div id="fb-root"></div>
             <div data-share="false" data-show-faces="false" data-action="like" data-layout="standard" data-width="300" data-href="" class="fb-like"></div>        
