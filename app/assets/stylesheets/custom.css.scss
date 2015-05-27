@@ -27,6 +27,7 @@ header[role="banner"]{
       float: right;
       > li {
         float: left;
+        margin-right:5px;
         > a {
           display: inline-block;
           padding: 8px 12px;
@@ -46,5 +47,17 @@ header[role="banner"]{
         }
       }
     }
+  }
+}
+
+main div.container{
+  div.well a.cool{
+    -webkit-box-shadow:rgba(0, 0, 0, 0.0470588) 0 1px 1px inset;
+    border:1px solid #E3E3E3;
+    border-radius:4px;
+    box-shadow:rgba(0, 0, 0, 0.0470588) 0 1px 1px inset;
+    margin-bottom:20px;
+    min-height:20px;
+    padding:19px;
   }
 }

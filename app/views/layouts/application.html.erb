@@ -49,24 +49,26 @@
             </ul>
             <ul>
               <% if current_user  %>
-                <li class= "btn">
-                    <i class="icon fa fa-user fa-lg"></i>
+                <li>
+                    <i class="icon fa fa-user fa-lg well btn"></i>
                     <%= button_to "Sign Out", destroy_user_session_path, mehod: :delete %>
                 </li>
-              <li class= "btn">
+              <li>
                   <a title="View Cart" href="#">
-                    <i class="icon fa fa-shopping-cart fa-lg"></i> 
+                    <i class="icon fa fa-shopping-cart fa-lg well btn"></i> 
                     <span>View Cart</span>
                   </a>
                 </li>
               <% else %>
-                <li class= "btn">
-                    <i class="icon fa fa-user fa-lg"></i>
-                    <%= link_to "Log In", new_user_session_path, method: :get  %>
+                <li>
+                    <i class="icon fa fa-user fa-lg well btn">
+                      <%= link_to "Log In", new_user_session_path,  method: :get  %>
+                    </i>
                 </li>
-                <li class= "btn"><!-- btn btn-primary navbar-btn-->
-                    <i class="fa fa-users"></i>
-                    <%= link_to "Register", new_user_registration_path, method: :get  %>
+                <li><!-- btn btn-primary navbar-btn-->
+                    <i class="fa fa-users well btn">
+                      <%= link_to "Register", new_user_registration_path, method: :get  %>
+                    </i>
                 </li>
                 
               <% end %>
