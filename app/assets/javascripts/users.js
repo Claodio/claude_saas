@@ -26,13 +26,20 @@ $(document).ready(function(){
     // Get reference to the form:
     var f = $('#new_user');
     
+    
     //Get the token from the response:
     var token = response.id;
     
     // Add the token to the form:
     f.append('<input type="hidden" name="user[stripe_card_token]" value=" '+ token + ' "/>');
     
+     // Get reference to the form by name:
+    var pro_contact_form =('form[name=pro_contact_form]');
+     //Submit the form:
+    
+    f.get(pro_contact_form).submit();
+    
     //Submit the form:
-    f.get(0).submit();
+//     f.get(0).submit();
   }
 });
