@@ -12,7 +12,7 @@ $(document).ready(function(){
     
     if(!error){
       //Get the Stripe token:
-      Stripe.createtoken({
+      Stripe.createToken({
         number: ccNum,
         cvc: cvcNum,
         exp_month: expMonth,
@@ -24,8 +24,7 @@ $(document).ready(function(){
   
   function stripeResponseHandler(status, response){
     // Get reference to the form:
-    var f = $('#new_user');
-    
+    var f = $('#new_user'); 
     
     //Get the token from the response:
     var token = response.id;
@@ -34,10 +33,9 @@ $(document).ready(function(){
     f.append('<input type="hidden" name="user[stripe_card_token]" value=" '+ token + ' "/>');
     
      // Get reference to the form by name:
-    var pro_contact_form =('form[name=pro_contact_form]');
+    var pro_registration_form =('form[name=pro_registration_form]');
      //Submit the form:
-    
-    f.get(pro_contact_form).submit();
+    f.get(pro_registration_form).submit();
     
     //Submit the form:
 //     f.get(0).submit();
