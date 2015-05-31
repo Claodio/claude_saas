@@ -52,14 +52,14 @@
             <ul>
               <% if current_user  %>
                 <li>
-                    <i class="icon fa fa-user fa-lg well btn"></i>
-                    <%= button_to "Sign Out", destroy_user_session_path, mehod: :delete %>
+                    <i class="icon fa fa-user fa-lg well btn">
+                      <%= link_to  "Sign Out", destroy_user_session_path, mehod: :delete %> <!--button_to -->
+                    </i>
                 </li>
-              <li>
-                  <a title="View Cart" href="#">
-                    <i class="icon fa fa-shopping-cart fa-lg well btn"></i> 
-                    <span>View Cart</span>
-                  </a>
+                <li>
+                    <i class="icon fa fa-shopping-cart fa-lg well btn"> 
+                    <%= link_to " View Cart" %>
+                    </i>
                 </li>
               <% else %>
                 <li>
